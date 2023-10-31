@@ -33,3 +33,16 @@ for c, v in candidates.items():
 print("-------------------------")
 print("Winner:", winner) #we have this variable winner in which we stored the name of the winner
 print("-------------------------")
+
+with open ("Resources/output.txt", "w") as f:
+    f.write("Election Results\n")
+    f.write("-------------------------\n")
+    f.write("Total Votes:", total_votes)
+    f.write("-------------------------\n")
+    i = 0
+    for c, v in candidates.items():
+        f.write(f"{c}: {round(percentage[i],3)}% ({v})\n")
+        i += 1
+        f.write("-------------------------\n")
+        f.write("Winner:", winner) #we have this variable winner in which we stored the name of the winner
+        f.write("-------------------------\n")
