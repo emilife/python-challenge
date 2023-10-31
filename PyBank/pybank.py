@@ -47,7 +47,15 @@ print(f"Average Change: ${round(average_month_change,2)}")
 print(f"Greatest Increase in Profits: {greatest_increase_month} (${int(greatest_increase)})")
 print(f"Greatest Decrease in Profits: {greatest_decrease_month} (${int(greatest_decrease)})")
     
-
+with open ("Resources/output.txt","w") as f:
+    f.write("Financial Analysis\n")
+    f.write("----------------------------\n")
+    print(f"Total Months: {len(tmonths)}\n")
+    print(f"Total: ${tprofits}\n")
+    print(f"Average Change: ${round(average_month_change,2)}\n")
+    print(f"Greatest Increase in Profits: {greatest_increase_month} (${int(greatest_increase)})\n")
+    print(f"Greatest Decrease in Profits: {greatest_decrease_month} (${int(greatest_decrease)})\n")
+    
     
      
      
